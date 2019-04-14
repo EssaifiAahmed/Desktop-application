@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Gestion_des_incidentsModelStoreContainer" CdmEntityContainer="Gestion_des_incidentsEntities">
+    <EntitySetMapping Name="Comptes">
+      <EntityTypeMapping TypeName="Gestion_des_incidentsModel.Compte">
+        <MappingFragment StoreEntitySet="Compte">
+          <ScalarProperty Name="Matricule" ColumnName="Matricule" />
+          <ScalarProperty Name="nom" ColumnName="nom" />
+          <ScalarProperty Name="prenom" ColumnName="prenom" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="tel" ColumnName="tel" />
+          <ScalarProperty Name="TP" ColumnName="TP" />
+          <ScalarProperty Name="MP" ColumnName="MP" />
+          <ScalarProperty Name="fonction" ColumnName="fonction" />
+          <ScalarProperty Name="servicee" ColumnName="servicee" />
+          <ScalarProperty Name="grade" ColumnName="grade" />
+          <ScalarProperty Name="Profilee" ColumnName="Profilee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Equipements">
+      <EntityTypeMapping TypeName="Gestion_des_incidentsModel.Equipement">
+        <MappingFragment StoreEntitySet="Equipement">
+          <ScalarProperty Name="idequipement" ColumnName="idequipement" />
+          <ScalarProperty Name="equipement1" ColumnName="equipement" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Familles">
+      <EntityTypeMapping TypeName="Gestion_des_incidentsModel.Famille">
+        <MappingFragment StoreEntitySet="Famille">
+          <ScalarProperty Name="idfamille" ColumnName="idfamille" />
+          <ScalarProperty Name="famille1" ColumnName="famille" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fichiers">
+      <EntityTypeMapping TypeName="Gestion_des_incidentsModel.Fichier">
+        <MappingFragment StoreEntitySet="Fichier">
+          <ScalarProperty Name="idfichier" ColumnName="idfichier" />
+          <ScalarProperty Name="Nincident" ColumnName="Nincident" />
+          <ScalarProperty Name="famille" ColumnName="famille" />
+          <ScalarProperty Name="equipement" ColumnName="equipement" />
+          <ScalarProperty Name="marque" ColumnName="marque" />
+          <ScalarProperty Name="modele" ColumnName="modele" />
+          <ScalarProperty Name="NP" ColumnName="NP" />
+          <ScalarProperty Name="NS" ColumnName="NS" />
+          <ScalarProperty Name="Servicee" ColumnName="Servicee" />
+          <ScalarProperty Name="Utilisateur" ColumnName="Utilisateur" />
+          <ScalarProperty Name="NT" ColumnName="NT" />
+          <ScalarProperty Name="DT" ColumnName="DT" />
+          <ScalarProperty Name="DA" ColumnName="DA" />
+          <ScalarProperty Name="DCT" ColumnName="DCT" />
+          <ScalarProperty Name="DTT" ColumnName="DTT" />
+          <ScalarProperty Name="remarque" ColumnName="remarque" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grades">
+      <EntityTypeMapping TypeName="Gestion_des_incidentsModel.Grade">
+        <MappingFragment StoreEntitySet="Grade">
+          <ScalarProperty Name="idgrade" ColumnName="idgrade" />
+          <ScalarProperty Name="grade1" ColumnName="grade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Incidents">
+      <EntityTypeMapping TypeName="Gestion_des_incidentsModel.Incident">
+        <MappingFragment StoreEntitySet="Incident">
+          <ScalarProperty Name="Nincident" ColumnName="Nincident" />
+          <ScalarProperty Name="dateR" ColumnName="dateR" />
+          <ScalarProperty Name="typee" ColumnName="typee" />
+          <ScalarProperty Name="servicee" ColumnName="servicee" />
+          <ScalarProperty Name="NC" ColumnName="NC" />
+          <ScalarProperty Name="descriptionn" ColumnName="descriptionn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InfoFEs">
+      <EntityTypeMapping TypeName="Gestion_des_incidentsModel.InfoFE">
+        <MappingFragment StoreEntitySet="InfoFE">
+          <ScalarProperty Name="idfichier" ColumnName="idfichier" />
+          <ScalarProperty Name="idfe" ColumnName="idfe" />
+          <ScalarProperty Name="FE" ColumnName="FE" />
+          <ScalarProperty Name="DD" ColumnName="DD" />
+          <ScalarProperty Name="TF" ColumnName="TF" />
+          <ScalarProperty Name="DR" ColumnName="DR" />
+          <ScalarProperty Name="NR" ColumnName="NR" />
+          <ScalarProperty Name="DRF" ColumnName="DRF" />
+          <ScalarProperty Name="remarque" ColumnName="remarque" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Marques">
+      <EntityTypeMapping TypeName="Gestion_des_incidentsModel.Marque">
+        <MappingFragment StoreEntitySet="Marque">
+          <ScalarProperty Name="idmarque" ColumnName="idmarque" />
+          <ScalarProperty Name="marque1" ColumnName="marque" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Modeles">
+      <EntityTypeMapping TypeName="Gestion_des_incidentsModel.Modele">
+        <MappingFragment StoreEntitySet="Modele">
+          <ScalarProperty Name="idmodele" ColumnName="idmodele" />
+          <ScalarProperty Name="modele1" ColumnName="modele" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Servicees">
+      <EntityTypeMapping TypeName="Gestion_des_incidentsModel.Servicee">
+        <MappingFragment StoreEntitySet="Servicee">
+          <ScalarProperty Name="idservicee" ColumnName="idservicee" />
+          <ScalarProperty Name="servicee1" ColumnName="servicee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

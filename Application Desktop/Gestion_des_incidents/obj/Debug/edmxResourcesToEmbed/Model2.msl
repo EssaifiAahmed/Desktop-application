@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Gestion_des_incidentsModel1StoreContainer" CdmEntityContainer="Gestion_des_incidentsEntities1">
+    <EntitySetMapping Name="Comptes">
+      <EntityTypeMapping TypeName="Gestion_des_incidentsModel1.Compte">
+        <MappingFragment StoreEntitySet="Compte">
+          <ScalarProperty Name="Mtaricule" ColumnName="Mtaricule" />
+          <ScalarProperty Name="nom" ColumnName="nom" />
+          <ScalarProperty Name="prenom" ColumnName="prenom" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="tel" ColumnName="tel" />
+          <ScalarProperty Name="TP" ColumnName="TP" />
+          <ScalarProperty Name="MP" ColumnName="MP" />
+          <ScalarProperty Name="idfonction" ColumnName="idfonction" />
+          <ScalarProperty Name="idService" ColumnName="idService" />
+          <ScalarProperty Name="idProfile" ColumnName="idProfile" />
+          <ScalarProperty Name="idGrade" ColumnName="idGrade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fichiers">
+      <EntityTypeMapping TypeName="Gestion_des_incidentsModel1.Fichier">
+        <MappingFragment StoreEntitySet="Fichier">
+          <ScalarProperty Name="IdFichier" ColumnName="IdFichier" />
+          <ScalarProperty Name="famille" ColumnName="famille" />
+          <ScalarProperty Name="equipement" ColumnName="equipement" />
+          <ScalarProperty Name="marque" ColumnName="marque" />
+          <ScalarProperty Name="modele" ColumnName="modele" />
+          <ScalarProperty Name="NP" ColumnName="NP" />
+          <ScalarProperty Name="NS" ColumnName="NS" />
+          <ScalarProperty Name="Servicee" ColumnName="Servicee" />
+          <ScalarProperty Name="utilisateur" ColumnName="utilisateur" />
+          <ScalarProperty Name="NT" ColumnName="NT" />
+          <ScalarProperty Name="DT" ColumnName="DT" />
+          <ScalarProperty Name="DA" ColumnName="DA" />
+          <ScalarProperty Name="DCT" ColumnName="DCT" />
+          <ScalarProperty Name="DTT" ColumnName="DTT" />
+          <ScalarProperty Name="reamrque" ColumnName="reamrque" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fonctions">
+      <EntityTypeMapping TypeName="Gestion_des_incidentsModel1.Fonction">
+        <MappingFragment StoreEntitySet="Fonction">
+          <ScalarProperty Name="idfonction" ColumnName="idfonction" />
+          <ScalarProperty Name="fonction1" ColumnName="fonction" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grades">
+      <EntityTypeMapping TypeName="Gestion_des_incidentsModel1.Grade">
+        <MappingFragment StoreEntitySet="Grade">
+          <ScalarProperty Name="idGrade" ColumnName="idGrade" />
+          <ScalarProperty Name="Grade1" ColumnName="Grade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Incidents">
+      <EntityTypeMapping TypeName="Gestion_des_incidentsModel1.Incident">
+        <MappingFragment StoreEntitySet="Incident">
+          <ScalarProperty Name="Nincident" ColumnName="Nincident" />
+          <ScalarProperty Name="dateR" ColumnName="dateR" />
+          <ScalarProperty Name="typee" ColumnName="typee" />
+          <ScalarProperty Name="idService" ColumnName="idService" />
+          <ScalarProperty Name="NC" ColumnName="NC" />
+          <ScalarProperty Name="Descriptionn" ColumnName="Descriptionn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InfoFEs">
+      <EntityTypeMapping TypeName="Gestion_des_incidentsModel1.InfoFE">
+        <MappingFragment StoreEntitySet="InfoFE">
+          <ScalarProperty Name="IdFichier" ColumnName="IdFichier" />
+          <ScalarProperty Name="Idfe" ColumnName="Idfe" />
+          <ScalarProperty Name="FE" ColumnName="FE" />
+          <ScalarProperty Name="DD" ColumnName="DD" />
+          <ScalarProperty Name="TF" ColumnName="TF" />
+          <ScalarProperty Name="DR" ColumnName="DR" />
+          <ScalarProperty Name="NR" ColumnName="NR" />
+          <ScalarProperty Name="DRF" ColumnName="DRF" />
+          <ScalarProperty Name="remarque" ColumnName="remarque" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Profilees">
+      <EntityTypeMapping TypeName="Gestion_des_incidentsModel1.Profilee">
+        <MappingFragment StoreEntitySet="Profilee">
+          <ScalarProperty Name="idProfile" ColumnName="idProfile" />
+          <ScalarProperty Name="Profilee1" ColumnName="Profilee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Servicees">
+      <EntityTypeMapping TypeName="Gestion_des_incidentsModel1.Servicee">
+        <MappingFragment StoreEntitySet="Servicee">
+          <ScalarProperty Name="idService" ColumnName="idService" />
+          <ScalarProperty Name="Servicee1" ColumnName="Servicee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

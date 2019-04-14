@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Gestion_des_incidentsModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Gestion_des_incidentsModelStoreContainer">
+    <EntitySet Name="Compte" EntityType="Gestion_des_incidentsModel.Store.Compte" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Equipement" EntityType="Gestion_des_incidentsModel.Store.Equipement" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Famille" EntityType="Gestion_des_incidentsModel.Store.Famille" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Fichier" EntityType="Gestion_des_incidentsModel.Store.Fichier" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Grade" EntityType="Gestion_des_incidentsModel.Store.Grade" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Incident" EntityType="Gestion_des_incidentsModel.Store.Incident" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="InfoFE" EntityType="Gestion_des_incidentsModel.Store.InfoFE" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Marque" EntityType="Gestion_des_incidentsModel.Store.Marque" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Modele" EntityType="Gestion_des_incidentsModel.Store.Modele" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Servicee" EntityType="Gestion_des_incidentsModel.Store.Servicee" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK__Compte__grade__1CF15040" Association="Gestion_des_incidentsModel.Store.FK__Compte__grade__1CF15040">
+      <End Role="Grade" EntitySet="Grade" />
+      <End Role="Compte" EntitySet="Compte" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Compte__servicee__1BFD2C07" Association="Gestion_des_incidentsModel.Store.FK__Compte__servicee__1BFD2C07">
+      <End Role="Servicee" EntitySet="Servicee" />
+      <End Role="Compte" EntitySet="Compte" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Fichier__equipem__24927208" Association="Gestion_des_incidentsModel.Store.FK__Fichier__equipem__24927208">
+      <End Role="Equipement" EntitySet="Equipement" />
+      <End Role="Fichier" EntitySet="Fichier" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Fichier__famille__239E4DCF" Association="Gestion_des_incidentsModel.Store.FK__Fichier__famille__239E4DCF">
+      <End Role="Famille" EntitySet="Famille" />
+      <End Role="Fichier" EntitySet="Fichier" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Fichier__marque__25869641" Association="Gestion_des_incidentsModel.Store.FK__Fichier__marque__25869641">
+      <End Role="Marque" EntitySet="Marque" />
+      <End Role="Fichier" EntitySet="Fichier" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Fichier__modele__267ABA7A" Association="Gestion_des_incidentsModel.Store.FK__Fichier__modele__267ABA7A">
+      <End Role="Modele" EntitySet="Modele" />
+      <End Role="Fichier" EntitySet="Fichier" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Fichier__Nincide__22AA2996" Association="Gestion_des_incidentsModel.Store.FK__Fichier__Nincide__22AA2996">
+      <End Role="Incident" EntitySet="Incident" />
+      <End Role="Fichier" EntitySet="Fichier" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Fichier__Service__276EDEB3" Association="Gestion_des_incidentsModel.Store.FK__Fichier__Service__276EDEB3">
+      <End Role="Servicee" EntitySet="Servicee" />
+      <End Role="Fichier" EntitySet="Fichier" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Incident__servic__1FCDBCEB" Association="Gestion_des_incidentsModel.Store.FK__Incident__servic__1FCDBCEB">
+      <End Role="Servicee" EntitySet="Servicee" />
+      <End Role="Incident" EntitySet="Incident" />
+    </AssociationSet>
+    <AssociationSet Name="FK__InfoFE__idfichie__2A4B4B5E" Association="Gestion_des_incidentsModel.Store.FK__InfoFE__idfichie__2A4B4B5E">
+      <End Role="Fichier" EntitySet="Fichier" />
+      <End Role="InfoFE" EntitySet="InfoFE" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Compte">
+    <Key>
+      <PropertyRef Name="Matricule" />
+    </Key>
+    <Property Name="Matricule" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="nom" Type="varchar" MaxLength="20" />
+    <Property Name="prenom" Type="varchar" MaxLength="20" />
+    <Property Name="email" Type="varchar" MaxLength="70" />
+    <Property Name="tel" Type="varchar" MaxLength="20" />
+    <Property Name="TP" Type="varchar" MaxLength="20" />
+    <Property Name="MP" Type="varchar" MaxLength="20" />
+    <Property Name="fonction" Type="varchar" MaxLength="20" />
+    <Property Name="servicee" Type="varchar" MaxLength="40" />
+    <Property Name="grade" Type="varchar" MaxLength="40" />
+    <Property Name="Profilee" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Equipement">
+    <Key>
+      <PropertyRef Name="idequipement" />
+    </Key>
+    <Property Name="idequipement" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="equipement" Type="varchar" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="Famille">
+    <Key>
+      <PropertyRef Name="idfamille" />
+    </Key>
+    <Property Name="idfamille" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="famille" Type="varchar" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="Fichier">
+    <Key>
+      <PropertyRef Name="idfichier" />
+    </Key>
+    <Property Name="idfichier" Type="int" Nullable="false" />
+    <Property Name="Nincident" Type="int" />
+    <Property Name="famille" Type="varchar" MaxLength="40" />
+    <Property Name="equipement" Type="varchar" MaxLength="40" />
+    <Property Name="marque" Type="varchar" MaxLength="40" />
+    <Property Name="modele" Type="varchar" MaxLength="40" />
+    <Property Name="NP" Type="varchar" MaxLength="20" />
+    <Property Name="NS" Type="varchar" MaxLength="20" />
+    <Property Name="Servicee" Type="varchar" MaxLength="40" />
+    <Property Name="Utilisateur" Type="varchar" MaxLength="40" />
+    <Property Name="NT" Type="varchar" MaxLength="10" />
+    <Property Name="DT" Type="date" />
+    <Property Name="DA" Type="date" />
+    <Property Name="DCT" Type="date" />
+    <Property Name="DTT" Type="int" />
+    <Property Name="remarque" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Grade">
+    <Key>
+      <PropertyRef Name="idgrade" />
+    </Key>
+    <Property Name="idgrade" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="grade" Type="varchar" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="Incident">
+    <Key>
+      <PropertyRef Name="Nincident" />
+    </Key>
+    <Property Name="Nincident" Type="int" Nullable="false" />
+    <Property Name="dateR" Type="date" />
+    <Property Name="typee" Type="varchar" MaxLength="20" />
+    <Property Name="servicee" Type="varchar" MaxLength="40" />
+    <Property Name="NC" Type="varchar" MaxLength="30" />
+    <Property Name="descriptionn" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="InfoFE">
+    <Key>
+      <PropertyRef Name="idfe" />
+    </Key>
+    <Property Name="idfichier" Type="int" />
+    <Property Name="idfe" Type="int" Nullable="false" />
+    <Property Name="FE" Type="varchar" MaxLength="30" />
+    <Property Name="DD" Type="date" />
+    <Property Name="TF" Type="varchar" MaxLength="10" />
+    <Property Name="DR" Type="date" />
+    <Property Name="NR" Type="varchar" MaxLength="20" />
+    <Property Name="DRF" Type="int" />
+    <Property Name="remarque" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Marque">
+    <Key>
+      <PropertyRef Name="idmarque" />
+    </Key>
+    <Property Name="idmarque" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="marque" Type="varchar" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="Modele">
+    <Key>
+      <PropertyRef Name="idmodele" />
+    </Key>
+    <Property Name="idmodele" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="modele" Type="varchar" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="Servicee">
+    <Key>
+      <PropertyRef Name="idservicee" />
+    </Key>
+    <Property Name="idservicee" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="servicee" Type="varchar" MaxLength="40" />
+  </EntityType>
+  <Association Name="FK__Compte__grade__1CF15040">
+    <End Role="Grade" Type="Gestion_des_incidentsModel.Store.Grade" Multiplicity="0..1" />
+    <End Role="Compte" Type="Gestion_des_incidentsModel.Store.Compte" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grade">
+        <PropertyRef Name="idgrade" />
+      </Principal>
+      <Dependent Role="Compte">
+        <PropertyRef Name="grade" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Compte__servicee__1BFD2C07">
+    <End Role="Servicee" Type="Gestion_des_incidentsModel.Store.Servicee" Multiplicity="0..1" />
+    <End Role="Compte" Type="Gestion_des_incidentsModel.Store.Compte" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Servicee">
+        <PropertyRef Name="idservicee" />
+      </Principal>
+      <Dependent Role="Compte">
+        <PropertyRef Name="servicee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Fichier__equipem__24927208">
+    <End Role="Equipement" Type="Gestion_des_incidentsModel.Store.Equipement" Multiplicity="0..1" />
+    <End Role="Fichier" Type="Gestion_des_incidentsModel.Store.Fichier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Equipement">
+        <PropertyRef Name="idequipement" />
+      </Principal>
+      <Dependent Role="Fichier">
+        <PropertyRef Name="equipement" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Fichier__famille__239E4DCF">
+    <End Role="Famille" Type="Gestion_des_incidentsModel.Store.Famille" Multiplicity="0..1" />
+    <End Role="Fichier" Type="Gestion_des_incidentsModel.Store.Fichier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Famille">
+        <PropertyRef Name="idfamille" />
+      </Principal>
+      <Dependent Role="Fichier">
+        <PropertyRef Name="famille" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Fichier__marque__25869641">
+    <End Role="Marque" Type="Gestion_des_incidentsModel.Store.Marque" Multiplicity="0..1" />
+    <End Role="Fichier" Type="Gestion_des_incidentsModel.Store.Fichier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Marque">
+        <PropertyRef Name="idmarque" />
+      </Principal>
+      <Dependent Role="Fichier">
+        <PropertyRef Name="marque" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Fichier__modele__267ABA7A">
+    <End Role="Modele" Type="Gestion_des_incidentsModel.Store.Modele" Multiplicity="0..1" />
+    <End Role="Fichier" Type="Gestion_des_incidentsModel.Store.Fichier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Modele">
+        <PropertyRef Name="idmodele" />
+      </Principal>
+      <Dependent Role="Fichier">
+        <PropertyRef Name="modele" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Fichier__Nincide__22AA2996">
+    <End Role="Incident" Type="Gestion_des_incidentsModel.Store.Incident" Multiplicity="0..1" />
+    <End Role="Fichier" Type="Gestion_des_incidentsModel.Store.Fichier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Incident">
+        <PropertyRef Name="Nincident" />
+      </Principal>
+      <Dependent Role="Fichier">
+        <PropertyRef Name="Nincident" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Fichier__Service__276EDEB3">
+    <End Role="Servicee" Type="Gestion_des_incidentsModel.Store.Servicee" Multiplicity="0..1" />
+    <End Role="Fichier" Type="Gestion_des_incidentsModel.Store.Fichier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Servicee">
+        <PropertyRef Name="idservicee" />
+      </Principal>
+      <Dependent Role="Fichier">
+        <PropertyRef Name="Servicee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Incident__servic__1FCDBCEB">
+    <End Role="Servicee" Type="Gestion_des_incidentsModel.Store.Servicee" Multiplicity="0..1" />
+    <End Role="Incident" Type="Gestion_des_incidentsModel.Store.Incident" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Servicee">
+        <PropertyRef Name="idservicee" />
+      </Principal>
+      <Dependent Role="Incident">
+        <PropertyRef Name="servicee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__InfoFE__idfichie__2A4B4B5E">
+    <End Role="Fichier" Type="Gestion_des_incidentsModel.Store.Fichier" Multiplicity="0..1" />
+    <End Role="InfoFE" Type="Gestion_des_incidentsModel.Store.InfoFE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fichier">
+        <PropertyRef Name="idfichier" />
+      </Principal>
+      <Dependent Role="InfoFE">
+        <PropertyRef Name="idfichier" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

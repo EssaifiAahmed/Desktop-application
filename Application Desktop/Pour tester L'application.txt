@@ -1,0 +1,12 @@
+---------------------------------------------------------------------------------------------------------------------------
+Pour tester l'application :
+===========================
+ADMIN:
+Matricule==> 67896
+Mot de passe==>ahmed
+Etat===>Admin
+===========================
+Pour changer le nom du serveur aller au  App.Config:
+<connectionstring>
+	
+</connectionstring>
